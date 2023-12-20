@@ -35,7 +35,7 @@ private:
 
 bool isBissextile(int year);
 bool isDate(int month, int day, int year);
-int getDaysInMonth(int month);
+int getDaysInMonth(int month, int year);
 int dayOfYear(Date d);
 std::string toString(Date d);
 
