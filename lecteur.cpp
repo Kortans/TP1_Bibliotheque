@@ -2,7 +2,7 @@
 
 Lecteur::Lecteur(){}
 
-Lecteur::Lecteur(int id, std::string nom, std::string prenom, Date datedenaissance){
+Lecteur::Lecteur(std::string id, std::string nom, std::string prenom, Date datedenaissance){
     Auteur(id, nom, prenom, datedenaissance);
 }
 

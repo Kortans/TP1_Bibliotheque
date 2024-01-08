@@ -9,7 +9,7 @@
 class Lecteur : public Auteur {
     public:
         Lecteur();
-        Lecteur(int id, std::string nom, std::string prenom, Date datedenaissance);
+        Lecteur(std::string id, std::string nom, std::string prenom, Date datedenaissance);
         void afficheLivresEmpruntes();
         void ajoutLivreEmprunte(Livre livre);
 

@@ -1,6 +1,6 @@
 #include "auteur.h"
 
-Auteur::Auteur(int id, std::string nom, std::string prenom, Date datedenaissance){
+Auteur::Auteur(std::string id, std::string nom, std::string prenom, Date datedenaissance){
     _id = id;
     _nom = nom;
     _prenom = prenom;
@@ -9,7 +9,7 @@ Auteur::Auteur(int id, std::string nom, std::string prenom, Date datedenaissance
 
 Auteur::Auteur()
 {}
-int Auteur::id() const{
+std::string Auteur::id() const{
     return _id;
 }
 std::string Auteur::nom() const{
