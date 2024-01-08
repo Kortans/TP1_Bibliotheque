@@ -1,6 +1,6 @@
 /**
   * @File: livre.h
-  * @Author: moi
+  * @Author: QDav
   * @Created on : 2023-12-20
   * @Last Modified time:
   *  
@@ -8,7 +8,7 @@
   */
 
 #include <iostream>
-#include <array>
+#include <vector>
 #include "date.h"
 
 #ifndef LIVRE_H
@@ -16,28 +16,29 @@
 
 class Livre{
     public:
-        Livre(std::string titre, auto auteurice, std::string genre, Date datePublic, std::string isbn);
+        Livre(std::string titre, std::string auteurice, std::string genre, Date datePublic, std::string isbn);
         
-        std::string titre() const;
-        auto auteurice()    const;
-        std::string genre() const;
-        Date datePublic()   const;
-        std::string isbn()  const;
+        std::string titre()    const;
+        std::string auteurice()const;
+        std::string genre()    const;
+        Date datePublic()      const;
+        std::string isbn()     const;
         
-        std::string dernierEmprunteur();
-        void ajoutEmprunteur();
+        std::string dernierEmprunteur() const;
+        void ajoutEmprunteur(std::string lecteur);
         
-        void modifAuteurice();
+        void modifAuteurice(std::string auteurice);
         
 
     private:
         std::string _titre;
-        auto _auteurice;
+        std::string _auteurice;
         std::string _genre;
         Date _datePublic;
         std::string _isbn;
-        std::array <std::string, 250> emprunteur;
+        std::vector <std::string> _emprunteur;
 };
 
+std::ostream& operator << (std::ostream& os, const Livre& livre);
 
 #endif // LIVRE.H
