@@ -8,6 +8,7 @@
   */
 
 
+#include "auteur.h"
 #include "date.h"
 #include "livre.h"
 #include <iostream>
@@ -20,8 +21,10 @@ int main(int argc, char const *argv[]) {
   std::cout << "a day + 1: " << toString(a_day) << std::endl;
   std::cout << "#day: " << dayOfYear(a_day) << std::endl;
 
+  Date naissanceDAdams(03,11,1952);
+  Auteur DAdams(42, "Adams" , "Douglas" , naissanceDAdams);
   Date sortiedubouquinla(04,05,1987);
-  Livre lebouquinla("The Hitchhiker's guide to the Galaxy","Douglas Adams","Science Fiction",sortiedubouquinla,"0593359445");
+  Livre lebouquinla("The Hitchhiker's guide to the Galaxy",DAdams,"Science Fiction",sortiedubouquinla,"0593359445");
   //std::cout << lebouquinla;
   lebouquinla.ajoutEmprunteur("Test");
   lebouquinla.ajoutEmprunteur("Test11");
