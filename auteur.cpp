@@ -7,6 +7,8 @@ Auteur::Auteur(int id, std::string nom, std::string prenom, Date datedenaissance
     _datedenaissance = datedenaissance;
 }
 
+Auteur::Auteur()
+{}
 int Auteur::id() const{
     return _id;
 }
@@ -21,5 +23,5 @@ Date Auteur::datedenaissance() const{
 }
 
 std::string toString(Auteur auteur) {
-    return std::to_string(auteur.prenom()) + " " + std::to_string(auteur.nom());
+    return auteur.prenom() + " " + auteur.nom();
 }

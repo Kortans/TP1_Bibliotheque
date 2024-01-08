@@ -7,6 +7,7 @@
 
 class Auteur {
 public:
+Auteur();
     Auteur(int id, std::string nom, std::string prenom, Date datedenaissance);
     int id() const;
     std::string nom() const;
