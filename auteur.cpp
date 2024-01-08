@@ -5,5 +5,17 @@ Auteur::Auteur(int id, std::string nom, std::string prenom, Date datedenaissance
     _nom = nom;
     _prenom = prenom;
     _datedenaissance = datedenaissance;
+}
 
+int Auteur::id() const{
+    return _id;
+}
+std::string Auteur::nom() const{
+    return _nom;
+}
+std::string Auteur::prenom() const{
+    return _prenom;
+}
+Date Auteur::datedenaissance() const{
+    return _datedenaissance;
 }
