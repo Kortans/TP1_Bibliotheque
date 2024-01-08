@@ -19,3 +19,7 @@ std::string Auteur::prenom() const{
 Date Auteur::datedenaissance() const{
     return _datedenaissance;
 }
+
+std::string toString(Auteur auteur) {
+    return std::to_string(auteur.prenom()) + " " + std::to_string(auteur.nom());
+}

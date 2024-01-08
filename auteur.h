@@ -21,4 +21,6 @@ private:
 
 };
 
+std::string toString(Auteur auteur);
+
 #endif // AUTEUR_H
