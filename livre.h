@@ -10,16 +10,17 @@
 #include <iostream>
 #include <vector>
 #include "date.h"
+#include "auteur.h"
 
 #ifndef LIVRE_H
 #define LIVRE_H
 
 class Livre{
     public:
-        Livre(std::string titre, std::string auteurice, std::string genre, Date datePublic, std::string isbn);
+        Livre(std::string titre, Auteur auteurice, std::string genre, Date datePublic, std::string isbn);
         
         std::string titre()    const;
-        std::string auteurice()const;
+        Auteur auteurice()const;
         std::string genre()    const;
         Date datePublic()      const;
         std::string isbn()     const;
@@ -27,12 +28,12 @@ class Livre{
         std::string dernierEmprunteur() const;
         void ajoutEmprunteur(std::string lecteur);
         
-        void modifAuteurice(std::string auteurice);
+        void modifAuteurice(Auteur auteurice);
         
 
     private:
         std::string _titre;
-        std::string _auteurice;
+        Auteur _auteurice;
         std::string _genre;
         Date _datePublic;
         std::string _isbn;

@@ -1,6 +1,6 @@
 #include "livre.h"
 
-Livre::Livre(std::string titre, std::string auteurice, std::string genre, Date datePublic, std::string isbn){
+Livre::Livre(std::string titre, Auteur auteurice, std::string genre, Date datePublic, std::string isbn){
     _titre = titre;
     _auteurice = auteurice;
     _genre = genre;
@@ -11,7 +11,7 @@ Livre::Livre(std::string titre, std::string auteurice, std::string genre, Date d
 std::string Livre::titre() const{
     return _titre;
 }
-std::string Livre::auteurice()    const{
+Auteur Livre::auteurice()    const{
     return _auteurice;
 }
 std::string Livre::genre() const{
@@ -32,7 +32,7 @@ void Livre::ajoutEmprunteur(std::string lecteur){
     _emprunteur.push_back(lecteur);
 }
         
-void Livre::modifAuteurice(std::string auteurice){
+void Livre::modifAuteurice(Auteur auteurice){
     _auteurice = auteurice;
 }
 
@@ -40,7 +40,7 @@ void Livre::modifAuteurice(std::string auteurice){
 
 std::ostream& operator << (std::ostream& os, const Livre& livre) {
     std::string premiereligne  = "Titre : "+livre.titre();
-    std::string deuxiemeligne  = "Ateurice : "+livre.auteurice();
+    std::string deuxiemeligne  = "Auteurice : "+toString(livre.auteurice());
     std::string troisiemeligne = "Genre : "+livre.genre();
     std::string quatriemeligne = "Date de Publication : "+toString(livre.datePublic());
     std::string cinquiemeligne = "ISBN : "+livre.isbn();
