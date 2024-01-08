@@ -7,7 +7,7 @@
   * @Description: Final class
   */
 
-
+#include "lecteur.h"
 #include "auteur.h"
 #include "date.h"
 #include "livre.h"
@@ -32,5 +32,14 @@ int main(int argc, char const *argv[]) {
   std::cout << "Dernier Emprunteur : "<<lebouquinla.dernierEmprunteur()<<std::endl;
 
   std::cout << lebouquinla<<std::endl;
+
+
+//----------------------------------------------
+
+  Date date(01,01,0001);
+  Lecteur SRiley(01,"Riley","Stef",date);
+  SRiley.ajoutLivreEmprunte(lebouquinla);
+  SRiley.afficheLivresEmpruntes();
+
   return 0;
 }
