@@ -10,9 +10,9 @@ class Emprunt {
     public:
         Emprunt(Date dateEmprunt, Livre livreEmprunte, Lecteur emprunteur);
 
-        Date dateEmprunt();
-        std::string isbn();
-        std::string id();
+        Date dateEmprunt() const;
+        std::string isbn() const;
+        std::string id()   const;
 
     private:
         Date _dateEmprunt;
@@ -20,5 +20,7 @@ class Emprunt {
         std::string _id;
 };
 
+
+std::ostream& operator << (std::ostream& os, const Emprunt& emprunt);
 
 #endif // EMPRUNT_H
